@@ -12,27 +12,39 @@ const Template: ComponentStory<typeof Toast> = (args) => <Toast {...args} />;
 export const Success = Template.bind({});
 Success.args = {
   status: "success",
-  title: "Success",
-  text: "Your changes are saved successfully.",
+  heading: "Success",
+  message: "Your changes are saved successfully.",
+  position: "topL",
+  onClose: () => alert("closed"),
+  duration: 1500,
 };
 
 export const Warning = Template.bind({});
 Warning.args = {
   status: "warning",
-  title: "Warning",
-  text: "Username you entered is invalid.",
+  heading: "Warning",
+  message: "Username you entered is invalid.",
+  position: "topR",
+  onClose: () => alert("closed"),
+  duration: 1500,
 };
 
 export const Error = Template.bind({});
 Error.args = {
   status: "error",
-  title: "Error",
-  text: "Error has occured while saving changes.",
+  heading: "Error",
+  message: "Error has occured while saving changes.",
+  position: "bottomL",
+  onClose: () => alert("closed"),
+  duration: 1500,
 };
 
 export const Info = Template.bind({});
 Info.args = {
   status: "info",
-  title: "Info",
-  text: "New settings available on your account.",
+  heading: "Info",
+  message: "New settings available on your account.",
+  position: "bottomR",
+  onClose: () => alert("closed"),
+  duration: 1500,
 };
